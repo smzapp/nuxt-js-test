@@ -12,6 +12,13 @@ export default {
     middleware: 'test',
   },
 
+  /* custom loading 
+   */
+  loading: {
+    color: 'blue',
+    height: '3px'
+  },
+
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -58,7 +65,11 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
   ],
+  axios: {
+    // proxyHeaders: false
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
